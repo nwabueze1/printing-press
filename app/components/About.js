@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
+const tabs = {
+  history: "history",
+  vision: "vision",
+  mission: "mission",
+};
 export default function About() {
+  const [currentTab, setCurrentTab] = useState(tabs.history);
+
+  const changeTab = (name) => setCurrentTab(name);
   return (
     <section className="section about" id="about">
       <div className="container">
@@ -24,8 +32,8 @@ export default function About() {
             >
               <li className="nav-item" role="presentation">
                 <a
-                  href="#pills-genarel"
-                  className="nav-link"
+                  className={`nav-link ${setActive(tabs.history)}`}
+                  onClick={() => changeTab(tabs.history)}
                   id="pills-genarel-tab"
                   data-bs-toggle="pill"
                   role="tab"
@@ -37,8 +45,8 @@ export default function About() {
               </li>
               <li className="nav-item" role="presentation">
                 <a
-                  href="#pills-privacy_policy"
-                  className="nav-link active"
+                  onClick={() => changeTab(tabs.vision)}
+                  className={`nav-link ${setActive(tabs.vision)}`}
                   id="pills-privacy_policy-tab"
                   data-bs-toggle="pill"
                   role="tab"
@@ -50,8 +58,8 @@ export default function About() {
               </li>
               <li className="nav-item" role="presentation">
                 <a
-                  href="#pills-pricing_plan"
-                  className="nav-link"
+                  onClick={() => changeTab(tabs.mission)}
+                  className={`nav-link ${setActive(tabs.mission)}`}
                   id="pills-teachers-tab"
                   data-bs-toggle="pill"
                   role="tab"
@@ -66,7 +74,7 @@ export default function About() {
           <div className="col-lg-12">
             <div className="tab-content" id="pills-tabContent">
               <div
-                className="tab-pane fade"
+                className={`tab-pane fade ${setActive(tabs.history)}`}
                 id="pills-genarel"
                 role="tabpanel"
                 aria-labelledby="pills-genarel-tab"
@@ -107,7 +115,7 @@ export default function About() {
                 </div>
               </div>
               <div
-                className="tab-pane fade active show"
+                className={`tab-pane fade ${setActive(tabs.vision)}`}
                 id="pills-privacy_policy"
                 role="tabpanel"
                 aria-labelledby="pills-privacy_policy-tab"
@@ -148,7 +156,7 @@ export default function About() {
                 </div>
               </div>
               <div
-                className="tab-pane fade"
+                className={`tab-pane fade ${setActive(tabs.mission)}`}
                 id="pills-pricing_plan"
                 role="tabpanel"
                 aria-labelledby="pills-tab"
@@ -194,4 +202,12 @@ export default function About() {
       </div>
     </section>
   );
+
+  function getSelectedAnchor(current) {
+    return currentTab === current ? "active" : "";
+  }
+
+  function setActive(current) {
+    return currentTab === current ? "active show" : "";
+  }
 }
