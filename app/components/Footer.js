@@ -11,63 +11,13 @@ export default function Footer() {
               <li>
                 <a href="javascript:void(0)">About</a>
               </li>
-              <li>
-                <a href="javascript:void(0)">Submit on issue</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">GitHub Repo</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">Slack</a>
-              </li>
             </ul>
           </div>
 
-          <div className="col-lg-3 col-md-4 col-6">
-            <h6 className="text-uppercase fw-semibold">Gatting Started</h6>
-            <ul className="list-unstyled footer-link mt-3 mb-0 fs-14">
-              <li>
-                <a href="javascript:void(0)">introduction</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">Usage</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">Globls</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">Elements</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">Collection</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="col-lg-3 col-md-4 col-6 d-none d-sm-block">
-            <h6 className="text-uppercase fw-semibold">Resources</h6>
-            <ul className="list-unstyled footer-link mt-3 mb-0 fs-14">
-              <li>
-                <a href="javascript:void(0)">Monitoring Grader </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">Video Tutorial</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">Term &amp; Service</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">Tulsy API</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">Marketplace</a>
-              </li>
-            </ul>
-          </div>
           <div className="col-lg-3 col-10">
             <h6 className="text-uppercase fw-semibold">
               Social medial
-              <span className="text-primary text-uppercase fs-18">Tydek</span>
+              {/* <span className="text-primary text-uppercase fs-18">Tydek</span> */}
             </h6>
             <p className="mt-md-3 pt-3 pt-md-2 fs-14">
               Semper nibh a dignissim Integer cursus tempsed.
